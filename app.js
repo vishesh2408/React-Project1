@@ -2,14 +2,14 @@ const express = require('express');
 const app = express();
 const cors = require('cors');
 const bodyParser= require('body-parser')
-const config = require('./config/config'); //全局配置
+const config = require('./config/config'); 
 const auth = require('./routes/auth')
 const auth_checker = require('./middleware/auth_checker')
 const fetchExam = require('./routes/fetchExam')
 const sendAnswer = require('./routes/sendAnswer')
 const passport = require('passport')
 const mongoose = require('mongoose')
-mongoose.connect(config.dbURL); // 连接数据库
+mongoose.connect(config.dbURL); 
 
 
 // Load passport strategies
